@@ -13,10 +13,9 @@ const nextConfig = {
   },
 };
 
-module.exports = withSentryConfig(nextConfig, {
-  // Sentry configuration here as you already have
-  org: "tech-wq",
-  project: "javascript-nextjs",
+const sentryWebpackPluginOptions = {
+  org: "tech-wq", // Replace with your org
+  project: "javascript-nextjs", // Replace with your project name
   silent: !process.env.CI,
   widenClientFileUpload: true,
   reactComponentAnnotation: {
@@ -25,4 +24,6 @@ module.exports = withSentryConfig(nextConfig, {
   hideSourceMaps: true,
   disableLogger: true,
   automaticVercelMonitors: true,
-});
+};
+
+module.exports = withSentryConfig(nextConfig, sentryWebpackPluginOptions);
