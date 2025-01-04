@@ -5,6 +5,7 @@ import { ThemeProvider } from "next-themes";
 
 const inter = Inter({ subsets: ["latin"] });
 
+
 export const metadata: Metadata = {
   title: "Mohd Shazan",
   description: "AI Engineer specializing in Generative AI, NLP, and innovative machine learning solutions.",
