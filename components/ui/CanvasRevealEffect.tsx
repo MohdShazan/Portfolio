@@ -288,13 +288,13 @@ const ShaderMaterial = ({
   );
 };
 
-const Shader: React.FC<ShaderProps> = ({ source, uniforms, maxFps = 60 }) => {
+function Shader({ source, uniforms, maxFps = 60 }) {
   return (
     <Canvas className="absolute inset-0  h-full w-full">
       <ShaderMaterial source={source} uniforms={uniforms} maxFps={maxFps} />
     </Canvas>
   );
-};
+}
 interface ShaderProps {
   source: string;
   uniforms: {
